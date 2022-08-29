@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 15px;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color:var(--Very-Dark-Blue);
+    margin-top: 76px;
+    font-size: 2.3rem;
+}
+h1 span {
+    font-weight: 200;
+}
+.paragraph {
+    text-align: center;
+    width: 35%;
+    color:var(--Grayish-Blue);
+    margin-top: 15px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    justify-content: center;
+    align-items: center;
+}
+.cards section {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-left: 30px;
+    padding-top: 27px;
+    padding-right: 30px;
+}
+.cards section h2 {
+    font-size: 20px;
+    color:var(--Very-Dark-Blue);
+}
+.cards section p {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 42px;
+    font-size: 13px;
+    margin-top: 10px;
+    color:var(--Grayish-Blue);
+}
+.cards section img {
+    float: right;
+    bottom:0;
+}
+.cards section:nth-child(1) {
+    border-top: 4px solid var(--Cyan);
+}
+.cards section:nth-child(3) {
+    border-top: 4px solid var(--Blue);
+}
+.cards .card section:nth-child(1) {
+    margin-bottom: 30px;
+    border-top: 4px solid var(--Red);
+}
+.cards .card section:nth-child(2) {
+    border-top: 4px solid var(--Orange);
+}
+@media screen and (max-width:998px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap:30px;
+    }
+}
+@media screen and (max-width:445px) {
+    h1 {
+        font-size: 25px;
+    }
+    .paragraph {
+        width: 80%;
+    }
+}
